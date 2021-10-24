@@ -15,27 +15,21 @@ export const settings = {
     graph:
     {
       nodes: [
-        {id:'eeg', class: brainsatplay.plugins.biosignals.EEG},
-        {id:'neurofeedback', class: brainsatplay.plugins.algorithms.Neurofeedback, params: {metric: 'Focus'}},
-        {id:'blink', class: brainsatplay.plugins.controls.Event},
+        {name:'eeg', class: brainsatplay.plugins.biosignals.EEG},
+        {name:'neurofeedback', class: brainsatplay.plugins.algorithms.Neurofeedback, params: {metric: 'Focus'}},
+        {name:'blink', class: brainsatplay.plugins.controls.Event},
         {
-          id:'unity', 
+          name:'unity', 
           class: Unity, 
+          // class: brainsatplay.plugins.utilities.Unity, // still need to fix routing for built-in plugin
           params:{
               config,
-              // onUnityEvent: (ev) => { // NOT BEING ASSIGNED
-
-              //   // Parse Messages from Unity
-              //   if (typeof ev === 'string'){
-              //     console.log('MESSAGE: ' + ev)
-              //   }
-
-              //   // Blink the Robot (v0.0.34)
-              //   let blink = settings.graph.nodes.find(n => n.id === 'blink');
-              //   console.log(blink)
-              //   blink.session.graph.runSafe(blink, 'default', {data: true});
-              //   blink.session.graph.runSafe(blink, 'default', {data: false});
-              // },
+              onUnityEvent: (ev) => {
+                // Parse Messages from Unity
+                if (typeof ev === 'string'){
+                  console.log('MESSAGE: ' + ev)
+                }
+              },
               commands: 
               [
                 {
@@ -82,7 +76,7 @@ export const settings = {
           }
         },
         {
-          id:'ui', 
+          name:'ui', 
           class: brainsatplay.plugins.interfaces.UI
         }
     ],

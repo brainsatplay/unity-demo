@@ -1,5 +1,3 @@
 import {settings} from './settings.js'
-let app =  new brainsatplay.Application(settings)
+let app =  new brainsatplay.App(settings)
 app.init()
-
-console.log('NEW BUILD')
