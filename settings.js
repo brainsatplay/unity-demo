@@ -34,21 +34,6 @@ export const settings = {
               [
                 {
                     object: 'GameApplication',
-                    function: 'UpdateAlpha',
-                    type: 'number'
-                },
-                {
-                    object: 'GameApplication',
-                    function: 'UpdateAlphaBeta',
-                    type: 'number'
-                },
-                {
-                    object: 'GameApplication',
-                    function: 'UpdateAlphaTheta',
-                    type: 'number'
-                },
-                {
-                    object: 'GameApplication',
                     function: 'UpdateCoherence',
                     type: 'number'
                 },
@@ -59,18 +44,8 @@ export const settings = {
                 },
                 {
                     object: 'GameApplication',
-                    function: 'UpdateThetaBeta',
-                    type: 'number'
-                },
-                {
-                    object: 'GameApplication',
                     function: 'UpdateBlink',
                     type: 'boolean'
-                },
-                {
-                    object: 'GameApplication',
-                    function: 'UpdateO1',
-                    type: 'number'
                 }
             ]
           }
