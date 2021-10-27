@@ -1,4 +1,4 @@
-var buildUrl = "./webbuild/Build";
+var buildUrl = "../webbuild/Build";
 export var config = {
   dataUrl: buildUrl + "/webbuild.data",
   loaderUrl: buildUrl + "/webbuild.loader.js",
