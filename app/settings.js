@@ -1,6 +1,6 @@
 
 // Link to Project Assets
-import {config} from '../webbuild/Build/buildconfig.js'
+import {config} from './buildconfig.js'
 import {Unity} from './Unity.js'
 
 export const settings = {
@@ -21,7 +21,6 @@ export const settings = {
         {
           name:'unity', 
           class: Unity, 
-          // class: brainsatplay.plugins.utilities.Unity, // still need to fix routing for built-in plugin
           params:{
               config,
               onUnityEvent: (ev) => {
@@ -79,5 +78,6 @@ export const settings = {
         }
       ]
     },
+    version: "0.0.36",
     connect: true
 }
